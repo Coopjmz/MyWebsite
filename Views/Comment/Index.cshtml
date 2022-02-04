@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Comments";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p><a href="/Comment/Create">Add a comment</a></p>
+
+@foreach (var entry in ViewBag.Entries)
+{
+    <section class="contact">
+        <header>
+            <h3>@entry.Message</h3>
+        </header>
+        <p>@entry.Name (@entry.Date.ToLongDateString())</p>
+    </section>
+}

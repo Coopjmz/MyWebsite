@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Gallery";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div id="gallery" class="jumbotron">
+    @foreach (var imagePath in ViewBag.Images)
+    {
+        <img src=@imagePath>
+    }
+</div>
